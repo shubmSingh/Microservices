@@ -1,7 +1,7 @@
 # Read Me First
 The following was discovered as part of building this project:
 
-* The original package name 'com.hacisimsek.question-service' is invalid and this project uses 'com.hacisimsek.questionservice' instead.
+* The original package name 'com.hacisimsek.questions-service' is invalid and this project uses 'com.hacisimsek.questionservice' instead.
 
 # Getting Started
 

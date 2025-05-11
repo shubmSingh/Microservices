@@ -1,3 +1,4 @@
+com/shubham/quizservice/Fallback/QuizInterfaceFallback.class
 com/shubham/quizservice/model/QuizDto.class
 com/shubham/quizservice/QuizServiceApplication.class
 com/shubham/quizservice/feign/QuizInterface.class

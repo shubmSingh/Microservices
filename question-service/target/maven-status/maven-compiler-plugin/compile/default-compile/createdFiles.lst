@@ -1,7 +1,7 @@
+com/shubham/questionservice/model/Questions.class
 com/shubham/questionservice/model/Response.class
 com/shubham/questionservice/dao/QuestionDao.class
 com/shubham/questionservice/model/QuestionWrapper.class
 com/shubham/questionservice/controller/QuestionController.class
 com/shubham/questionservice/service/QuestionService.class
 com/shubham/questionservice/QuestionServiceApplication.class
-com/shubham/questionservice/model/Question.class

@@ -4,6 +4,9 @@ import com.shubham.questionservice.dao.QuestionDao;
 import com.shubham.questionservice.model.Questions;
 import com.shubham.questionservice.model.QuestionWrapper;
 import com.shubham.questionservice.model.Response;
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
+import io.github.resilience4j.retry.annotation.Retry;
+import io.github.resilience4j.timelimiter.annotation.TimeLimiter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -11,6 +14,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.CompletableFuture;
 
 @Service
 public class QuestionService {
@@ -18,6 +22,10 @@ public class QuestionService {
     @Autowired
     QuestionDao questionDao;
 
+    // Circuit Breaker, Retry, and Timeout applied to this method
+    @CircuitBreaker(name = "quizService", fallbackMethod = "getAllQuestionsFallback")
+//    @Retry(name = "quizService", fallbackMethod = "getAllQuestionsFallback")
+//    @TimeLimiter(name = "quizService", fallbackMethod = "getAllQuestionsFallback")
     public ResponseEntity<List<Questions>> getAllQuestions() {
        try {
            List<Questions> questions = questionDao.findAll();
@@ -28,6 +36,12 @@ public class QuestionService {
        } catch (Exception e) {
            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
        }
+    }
+
+    // Fallback method when any of the resilience patterns fail
+    public CompletableFuture<ResponseEntity<List<Questions>>> getAllQuestionsFallback(Throwable t) {
+        // Handle fallback logic, could return default data or a specific message
+        return CompletableFuture.supplyAsync(() -> new ResponseEntity<>(HttpStatus.SERVICE_UNAVAILABLE));
     }
 
     public ResponseEntity<List<Questions>> getQuestionsByCategory(String category) {
