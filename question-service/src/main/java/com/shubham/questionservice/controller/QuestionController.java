@@ -1,6 +1,6 @@
 package com.shubham.questionservice.controller;
 
-import com.shubham.questionservice.model.Question;
+import com.shubham.questionservice.model.Questions;
 import com.shubham.questionservice.model.QuestionWrapper;
 import com.shubham.questionservice.model.Response;
 import com.shubham.questionservice.service.QuestionService;
@@ -25,18 +25,18 @@ public class QuestionController {
 
 
     @GetMapping("/allQuestions")
-    public ResponseEntity<List<Question>> getAllQuestions() {
+    public ResponseEntity<List<Questions>> getAllQuestions() {
         return questionService.getAllQuestions();
     }
 
     @GetMapping("/category/{category}")
-    public ResponseEntity<List<Question>> getQuestionsByCategory(@PathVariable String category) {
+    public ResponseEntity<List<Questions>> getQuestionsByCategory(@PathVariable String category) {
         return questionService.getQuestionsByCategory(category);
     }
 
     @PostMapping("/addQuestion")
-    public ResponseEntity<String> addQuestion(@RequestBody Question question) {
-        return questionService.addQuestion(question);
+    public ResponseEntity<String> addQuestion(@RequestBody Questions questions) {
+        return questionService.addQuestion(questions);
     }
 
     @GetMapping("/generate")

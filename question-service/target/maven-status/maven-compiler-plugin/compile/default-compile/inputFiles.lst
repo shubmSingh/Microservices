@@ -1,7 +1,7 @@
 /Users/shubhams@backbase.com/IdeaProjects/Microservices/question-service/src/main/java/com/shubham/questionservice/controller/QuestionController.java
+/Users/shubhams@backbase.com/IdeaProjects/Microservices/question-service/src/main/java/com/shubham/questionservice/model/Questions.java
 /Users/shubhams@backbase.com/IdeaProjects/Microservices/question-service/src/main/java/com/shubham/questionservice/dao/QuestionDao.java
 /Users/shubhams@backbase.com/IdeaProjects/Microservices/question-service/src/main/java/com/shubham/questionservice/QuestionServiceApplication.java
 /Users/shubhams@backbase.com/IdeaProjects/Microservices/question-service/src/main/java/com/shubham/questionservice/service/QuestionService.java
 /Users/shubhams@backbase.com/IdeaProjects/Microservices/question-service/src/main/java/com/shubham/questionservice/model/Response.java
-/Users/shubhams@backbase.com/IdeaProjects/Microservices/question-service/src/main/java/com/shubham/questionservice/model/Question.java
 /Users/shubhams@backbase.com/IdeaProjects/Microservices/question-service/src/main/java/com/shubham/questionservice/model/QuestionWrapper.java

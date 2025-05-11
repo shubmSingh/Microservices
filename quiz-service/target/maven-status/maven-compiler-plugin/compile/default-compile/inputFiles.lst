@@ -1,6 +1,7 @@
 /Users/shubhams@backbase.com/IdeaProjects/Microservices/quiz-service/src/main/java/com/shubham/quizservice/model/QuizDto.java
 /Users/shubhams@backbase.com/IdeaProjects/Microservices/quiz-service/src/main/java/com/shubham/quizservice/model/Quiz.java
 /Users/shubhams@backbase.com/IdeaProjects/Microservices/quiz-service/src/main/java/com/shubham/quizservice/QuizServiceApplication.java
+/Users/shubhams@backbase.com/IdeaProjects/Microservices/quiz-service/src/main/java/com/shubham/quizservice/Fallback/QuizInterfaceFallback.java
 /Users/shubhams@backbase.com/IdeaProjects/Microservices/quiz-service/src/main/java/com/shubham/quizservice/feign/QuizInterface.java
 /Users/shubhams@backbase.com/IdeaProjects/Microservices/quiz-service/src/main/java/com/shubham/quizservice/controller/QuizController.java
 /Users/shubhams@backbase.com/IdeaProjects/Microservices/quiz-service/src/main/java/com/shubham/quizservice/model/Response.java
